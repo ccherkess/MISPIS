@@ -34,17 +34,3 @@ services:
       - migrate
     volumes:
       - ./migrations:/flyway/sql
-
-  pgadmin:
-    image: dpage/pgadmin4
-    environment:
-      PGADMIN_DEFAULT_EMAIL: root@email.com
-      PGADMIN_DEFAULT_PASSWORD: root
-    ports:
-      - "8080:80"
-    depends_on:
-      postgres:
-        condition: service_healthy
-
-volumes:
-  postgres_data:
