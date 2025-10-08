@@ -1,5 +1,5 @@
 -- =============================================
--- Название: FIND_BOM_SIMPLE_ORDER
+-- Название: find_bom
 -- Цель: Упрощенная версия с порядком обхода в глубину
 -- Параметры:
 --   pIdProd INTEGER – ID изделия
@@ -34,7 +34,6 @@ BEGIN
 
                                     UNION ALL
 
-                                    -- Рекурсивный случай
                                     SELECT bt.tab || '-----' as tab,
                                            i.id              as item_id,
                                            i.name            as item_name,

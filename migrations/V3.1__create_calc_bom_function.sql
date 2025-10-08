@@ -1,5 +1,5 @@
 -- =============================================
--- Название: CALC_BOM_WITH_FLAGS
+-- Название: calc_bom
 -- Цель: Расчет с учетом флагов базы и модификаций
 -- Параметры:
 --   pIdProd INTEGER – ID изделия
@@ -9,7 +9,7 @@
 --   quantity BIGINT – Суммарное количество
 --   is_base_item BOOLEAN – Флаг базового ресурса
 -- =============================================
-CREATE OR REPLACE FUNCTION CALC_BOM_WITH_FLAGS(
+CREATE OR REPLACE FUNCTION calc_bom(
     pIdProd INTEGER,
     pQuantity INTEGER
 )
